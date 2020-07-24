@@ -12,7 +12,7 @@ const md = new MarkdownIt({
       highlightedCode = hljs.highlight(lang, code).value
     }
 
-    return highlightedCode;
+    return `<pre class="hljs"><code>${highlightedCode}</code></pre>`;
   }
 
 });
