@@ -7,8 +7,6 @@ const md = new MarkdownIt();
 
 export default Component.extend({
 
-  source: 'Hello, *markdown*!',
-
   html: computed('source', function() {
     return htmlSafe(md.render(this.source));
   })
