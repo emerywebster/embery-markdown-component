@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'ember-markdown-component',
+    podModulePrefix: 'ember-markdown-component/pods',
     environment,
     rootURL: '/',
     locationType: 'auto',
