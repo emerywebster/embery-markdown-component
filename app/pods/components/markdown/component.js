@@ -6,12 +6,13 @@ import { htmlSafe } from '@ember/string';
 
 const md = new MarkdownIt({
   highlight(code, lang) {
+    let highlightedCode = code;
+
     if (hljs.getLanguage(lang)) {
-    return hljs.highlight(lang, code).value
+      highlightedCode = hljs.highlight(lang, code).value
     }
-    else {
-      return code;
-    }
+
+    return highlightedCode;
   }
 
 });
