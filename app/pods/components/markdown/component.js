@@ -19,6 +19,7 @@ const md = new MarkdownIt({
 
 export default Component.extend({
 
+  classNames: 'markdown',
   html: computed('source', function() {
     return htmlSafe(md.render(this.source));
   })
